@@ -1,15 +1,28 @@
-@media (max-width: 576px) {
-    table {
-        width: 95%;
-        height: auto;
-    }
+        table {
+            width: 80%;
+            height: 150px;
+            border-collapse: collapse;
+            border: 2px solid black;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
 
-    td {
-        display: block;
-        width: 100%;
-    }
+        td {
+            border: 2px solid black;
+        }
 
-    tr {
-        display: block;
-    }
-}
+        @media (max-width: 576px) {
+            table {
+                width: 95%;
+                height: auto;
+            }
+
+            tr {
+                display: block;
+            }
+
+            td {
+                display: block;
+                width: 100%;
+            }
+        }
