@@ -1,0 +1,15 @@
+@media (max-width: 576px) {
+    table {
+        width: 95%;
+        height: auto;
+    }
+
+    td {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        display: block;
+    }
+}
