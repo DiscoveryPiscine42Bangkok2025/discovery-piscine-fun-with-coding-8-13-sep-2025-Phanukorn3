@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Tab</title>
     <style>
+        table {
+            width: 80%;
+            height: 150px;
+            border-collapse: collapse;
+            border: 2px solid black;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        td {
+            border: 2px solid black;
+        }
+
         @media (max-width: 576px) {
             table {
                 width: 95%;
                 height: auto;
             }
 
+            tr {
+                display: block;
+            }
+
             td {
                 display: block;
                 width: 100%;
             }
-
-            tr {
-                display: block;
-            }
         }
     </style>
 </head>
-
 <body>
-    <table width="80%" height="150px"
-        style="border-collapse: collapse; border: 2px solid black; margin-left: 10%; margin-right: 10%;">
+    <table>
         <tr>
-            <td bgcolor="#c2c28b" style="border: 2px solid black;">First cell</td>
-            <td bgcolor="#f4b9ab" style="border: 2px solid black;">Second cell</td>
+            <td bgcolor="#c2c28b">First cell</td>
+            <td bgcolor="#f4b9ab">Second cell</td>
         </tr>
     </table>
 </body>
-
 </html>
