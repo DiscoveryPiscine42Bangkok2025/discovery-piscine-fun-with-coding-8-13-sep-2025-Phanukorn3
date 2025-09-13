@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+</head>
+<body>
+  <h2>Basic Calculator</h2>
+
+  <input type="text" id="left" placeholder="Left number">
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+  </select>
+  <input type="text" id="right" placeholder="Right number">
+  <input type="button" value="Try me!" onclick="calculate()">
+
+  <script>
+    function calculate() {
+      const left = document.getElementById('left').value;
+      const right = document.getElementById('right').value;
+      const operator = document.getElementById('operator').value;
+
+      // ตรวจสอบว่าทั้งสองเป็นจำนวนเต็มบวก
+      if (!/^\d+$/.test(left) || !/^\d+$/.test(right)) {
+        alert('Error :(');
+        return;
+      }
+
+      const leftNum = parseInt(left);
+      const rightNum = parseInt(right);
+      let result;
+
+      // ตรวจสอบการหารหรือ modulo ด้วย 0
+      if ((operator === '/' || operator === '%') && rightNum === 0) {
+        alert("It's over 9000!");
+        console.log("It's over 9000!");
+        return;
+      }
+
+      switch(operator) {
+        case '+': result = leftNum + rightNum; break;
+        case '-': result = leftNum - rightNum; break;
+        case '*': result = leftNum * rightNum; break;
+        case '/': result = leftNum / rightNum; break;
+        case '%': result = leftNum % rightNum; break;
+      }
+
+      alert("Result: " + result);
+      console.log("Result:", result);
+    }
+
+    // ทุก 30 วินาที ให้ pop-up alert
+    setInterval(() => {
+      alert('Please, use me...');
+    }, 30000);
+  </script>
+</body>
+</html>
