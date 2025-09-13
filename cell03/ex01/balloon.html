@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>balloon</title>
+    <style>
+        #balloon {
+            width: 200px;
+            height: 200px;
+            background: red;
+            border-radius: 50%;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="balloon"></div>
+
+    <script>
+        let b = document.getElementById("balloon");
+        let size = 200, colors = ["red", "green", "blue"], i = 0;
+
+        b.onclick = () => {
+            size += 10;
+            if (size > 420) { size = 200; i = 0; }
+            else i = (i + 1) % 3;
+            console.log(i)
+            update();
+        };
+
+        b.onmouseleave = () => {
+            size = Math.max(200, size - 5);
+            i = (i + 2) % 3;
+            console.log(size)
+            update();
+        };
+
+        function update() {
+            b.style.width = size + "px";
+            b.style.height = size + "px";
+            b.style.background = colors[i];
+        }
+    </script>
+
+</body>
+
+</html>
