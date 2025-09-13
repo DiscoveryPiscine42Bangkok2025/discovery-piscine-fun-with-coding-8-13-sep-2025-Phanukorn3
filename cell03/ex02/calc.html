@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Simple Calculator</title>
+  <title>Calculator</title>
 </head>
 <body>
   <h2>Basic Calculator</h2>
@@ -24,7 +24,6 @@
       const right = document.getElementById('right').value;
       const operator = document.getElementById('operator').value;
 
-      // ตรวจสอบว่าทั้งสองเป็นจำนวนเต็มบวก
       if (!/^\d+$/.test(left) || !/^\d+$/.test(right)) {
         alert('Error :(');
         return;
@@ -34,7 +33,6 @@
       const rightNum = parseInt(right);
       let result;
 
-      // ตรวจสอบการหารหรือ modulo ด้วย 0
       if ((operator === '/' || operator === '%') && rightNum === 0) {
         alert("It's over 9000!");
         console.log("It's over 9000!");
@@ -53,7 +51,6 @@
       console.log("Result:", result);
     }
 
-    // ทุก 30 วินาที ให้ pop-up alert
     setInterval(() => {
       alert('Please, use me...');
     }, 30000);
