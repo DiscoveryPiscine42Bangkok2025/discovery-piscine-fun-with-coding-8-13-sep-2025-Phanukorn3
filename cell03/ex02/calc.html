@@ -3,11 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Calculator</title>
+  <style>
+    body{
+        text-align: center;
+    }
+  </style>
 </head>
 <body>
   <h2>Basic Calculator</h2>
 
-  <input type="text" id="left" placeholder="Left number">
+  <input type="text" id="left">
   <select id="operator">
     <option value="+">+</option>
     <option value="-">-</option>
@@ -15,7 +20,7 @@
     <option value="/">/</option>
     <option value="%">%</option>
   </select>
-  <input type="text" id="right" placeholder="Right number">
+  <input type="text" id="right">
   <input type="button" value="Try me!" onclick="calculate()">
 
   <script>
