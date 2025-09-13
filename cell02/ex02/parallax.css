@@ -11,13 +11,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      color: white;
       font-size: 24px;
       font-weight: bold;
     }
 
     .block {
-      color: rgb(0, 0, 0);
+      color: black;
       text-align: center;
       padding: 50px;
       font-size: 20px;
